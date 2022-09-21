@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>We Tube - Your Video Streamer</title>
+  <link rel="icon" href="files/logo.svg">
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" /><!-- Material Icons CSS-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.js"> </script>
+  <script type="text/javascript" src="json_load.js"></script>   <!-- Javascript to load videos thumbnail and channel details from files/data.json file-->
+  <script type="text/javascript" src="search.js"></script>   <!-- Javascript to search video by name and redirect to index.html-->
+
+</head>
+
+<body>
+  <header class="header">
+    <a href="index.html">
+      <img src="files/logo.svg" alt="WeTube - Your Video Streamer" class="wetube-logo" />
+    </a>
+    <!-- On Search, the reload_with_param method is called which redirects to index.html with search parm and loads the search result-->
+    <form class="search-bar" onsubmit="return false;">
+      <input class="search-input" id="search" type="search" placeholder="Search" aria-label="Search" />
+      <button type="submit" class="search-btn" onclick="reload_with_param()">
+        <i class="material-icons">search</i></button>
+    </form>
+
+    <!-- Material icons css is used for Mic, video call , notifications and account_circle-->
+    <div class="menu-icons">
+      <i class="material-icons">mic</i>
+      <i class="material-icons">video_call</i></button>
+      <i class="material-icons">notifications_active</i></button>
+      <i class="material-icons">account_circle</i></button>
+    </div>
+  </header>
+
+  <div class="categories">
+    <section class="category-section">
+      <button class="category">All</button>
+      <button class="category">Novera</button>
+      <button class="category">Live</button>
+      <button class="category">Shorts</button>
+      <button class="category">Trending</button>
+      <button class="category">Shorts</button>
+      <button class="category">Front End</button>
+      <button class="category">HTML</button>
+      <button class="category">CSS</button>
+      <button class="category">React</button>
+      <button class="category">JS</button>
+      <button class="category">NodeJS</button>
+    </section>
+  </div>
+
+  <div class="videos">
+    <section class="video-section">
+            <!-- We load the data from files/data.json and append the html contents to video-section class-->
+
+    </section>
+  </div>
+</body>
+
+</html>
